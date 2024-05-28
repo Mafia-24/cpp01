@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 00:48:33 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/28 01:54:26 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/05/28 03:10:08 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Zombie* newZombie( std::string name );
 void	randomChump( std::string name );
 
-int main()
+int main( void )
 {
 	Zombie* heapZombie = newZombie ( "Zombie 1" );
 	

@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 00:48:33 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/28 02:54:11 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/05/28 03:10:01 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie* zombieHorde( int N, std::string name );
 
-int main()
+int main( void )
 {
 	int		N = 10;
 	Zombie* heapZombies = zombieHorde ( N, "ZombieGang");
