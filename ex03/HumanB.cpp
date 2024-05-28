@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 04:26:28 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/28 05:56:57 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/05/28 06:05:41 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 HumanB::HumanB()
 {
 	_weapon = nullptr;
-	 // i must give it an empty type weapon so that i can now that this one has no weapon
 }
 
 HumanB::HumanB( std::string name ) : _name(name){
