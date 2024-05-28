@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 06:17:54 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/28 06:56:10 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/05/28 08:02:04 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 
 void	replace_occurences(std::string& line, std::string to_replace, std::string replacement)
 {
-	int	position;
+	size_t	position = 0;
 
-	position = 0;
-	while (line.find(to_replace, position) != std::string::npos)
+	position = line.find(to_replace, position);
+	while (position != std::string::npos)
 	{
-		line.erase(position, to_replace.length ());
+		line.erase(position, to_replace.length());
 		line.insert(position, replacement);
 		position += replacement.length();
+		position = line.find(to_replace, position);
 	}
 }
 
@@ -59,14 +60,18 @@ int main(int ac, char *av[])
 		return (1);
 	}
 	
+	std::string fileContent;
 	std::string line;
 	
 	while (getline(fileIn, line))
 	{
-		replace_occurences(line, to_replace, replacement);
-		fileOut << line;
-		fileOut << std::endl; // a new line gets added at the last time
+		if (!fileIn.eof())
+			line.append ("\n");
+		fileContent.append (line);
 	}
+	
+	replace_occurences(fileContent, to_replace, replacement);
+	fileOut << fileContent;
 	
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 03:58:31 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/28 05:59:17 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/05/28 08:02:21 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public :
 private :
 
 	std::string _name;
-	Weapon*		_weapon;
+	Weapon&		_weapon;
 };
 
 #endif
