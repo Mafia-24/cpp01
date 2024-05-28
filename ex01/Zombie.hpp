@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 00:42:17 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/28 02:18:47 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/05/28 03:52:55 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public :
 
 private :
 
-	std::string name;
+	std::string _name;
 };
 
 

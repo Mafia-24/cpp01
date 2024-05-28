@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 00:45:51 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/28 03:53:07 by ymafaman         ###   ########.fr       */
+/*   Created: 2024/05/28 03:58:31 by ymafaman          #+#    #+#             */
+/*   Updated: 2024/05/28 05:59:17 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMAN_A_HPP
+# define HUMAN_A_HPP
 
-void Zombie::announce( void )
-{
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#include "Weapon.hpp"
 
-Zombie::Zombie( std::string name )
-{
-	this->_name = name;
-}
+class HumanA{
 
-Zombie::Zombie () : name(""){
+public :
+
+	HumanA(std::string name, Weapon& weapon);
+	HumanA(Weapon& weapon);
+	
+	~HumanA();
+
+	void		setName( std::string name );
+
+	void	attack( void );
+
+private :
+
+	std::string _name;
+	Weapon*		_weapon;
 };
 
-void	Zombie::setName( std::string name)
-{
-	this->_name = name;
-}
+#endif

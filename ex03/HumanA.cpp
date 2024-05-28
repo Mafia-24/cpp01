@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 00:45:51 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/28 03:53:07 by ymafaman         ###   ########.fr       */
+/*   Created: 2024/05/28 04:01:36 by ymafaman          #+#    #+#             */
+/*   Updated: 2024/05/28 05:52:01 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-void Zombie::announce( void )
-{
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+HumanA::HumanA(std::string name, Weapon& weapon) : _name(name), _weapon(&weapon){	
 }
 
-Zombie::Zombie( std::string name )
+HumanA::HumanA(Weapon& weapon) : _weapon(&weapon){
+}
+
+void	HumanA::setName( std::string name )
 {
 	this->_name = name;
 }
 
-Zombie::Zombie () : name(""){
-};
-
-void	Zombie::setName( std::string name)
+void	HumanA::attack( void )
 {
-	this->_name = name;
+	std::cout << this->_name << " attacks with their " << this->_weapon->getType () << std::endl;
+}
+
+HumanA::~HumanA()
+{
+	// if (this->_weapon != nullptr)
+	// 	delete this->_weapon;
 }
