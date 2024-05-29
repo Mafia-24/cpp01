@@ -5,45 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 00:48:33 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/29 00:46:43 by ymafaman         ###   ########.fr       */
+/*   Created: 2024/05/29 02:25:48 by ymafaman          #+#    #+#             */
+/*   Updated: 2024/05/29 02:31:44 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-Zombie* newZombie( std::string name );
-void	randomChump( std::string name );
+#include "Harl.hpp"
 
 int main( void )
 {
-	Zombie* heapZombie = newZombie ( "Zombie 1" );
 	
-	heapZombie->announce ();
-	
-	randomChump ( "Zombie 2" );
-	
-	delete heapZombie;
-	
-	return (0);
-}
+	Harl harl;
 
-Zombie* newZombie( std::string name )
-{
-	Zombie* zombie = new(std::nothrow) Zombie(name);
-	
-	if (!zombie)
-	{
-		std::cout << "Zombie allocation failed!" << std::endl;
-		exit (1);
-	}
+	harl.complain( "ERROdR" );
+	harl.complain( "WARNING" );
+	harl.complain( "INFO" );
+	harl.complain( "DEBUG" );
+	harl.complain( "ERROR" );
 
-	return (zombie);
-}
-
-void	randomChump( std::string name )
-{
-	Zombie stackZombie(name);
-
-	stackZombie.announce();
+	return 0;
 }

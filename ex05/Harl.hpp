@@ -1,21 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 00:45:51 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/29 00:45:13 by ymafaman         ###   ########.fr       */
+/*   Created: 2024/05/29 01:58:56 by ymafaman          #+#    #+#             */
+/*   Updated: 2024/05/29 02:29:13 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-void Zombie::announce( void )
-{
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#include <iostream>
 
-Zombie::Zombie( std::string name ) : name(name){
-}
+class Harl{
+
+	typedef void (Harl::*f)( void );
+	
+public :
+
+	void complain( std::string level );
+
+private :
+
+	f action;
+	
+	void debug( void );
+
+	void info( void );
+
+	void warning( void );
+
+	void error( void );
+
+	void unlistedLevel( void );
+
+};
+
+
+
+#endif

@@ -6,13 +6,14 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 06:17:54 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/28 08:02:04 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/05/29 00:44:13 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
-
+#include <stdlib.h>
+#include<unistd.h>    
 void	replace_occurences(std::string& line, std::string to_replace, std::string replacement)
 {
 	size_t	position = 0;
@@ -26,6 +27,7 @@ void	replace_occurences(std::string& line, std::string to_replace, std::string r
 		position = line.find(to_replace, position);
 	}
 }
+
 
 int main(int ac, char *av[])
 {
@@ -70,8 +72,14 @@ int main(int ac, char *av[])
 		fileContent.append (line);
 	}
 	
+	fileIn.close (); // protect ?
+
 	replace_occurences(fileContent, to_replace, replacement);
 	fileOut << fileContent;
 	
+	fileOut.close ();
+	
+
+	sleep(10);
 	return 0;
 }
