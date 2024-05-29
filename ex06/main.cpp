@@ -1,45 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/29 01:58:56 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/29 04:03:49 by ymafaman         ###   ########.fr       */
+/*   Created: 2024/05/29 03:03:25 by ymafaman          #+#    #+#             */
+/*   Updated: 2024/05/29 04:20:46 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
 
-#include <iostream>
+#include "Harl.hpp"
 
-class Harl{
+int main(int ac, char *av[])
+{
+	if (ac != 2)
+	{
+		std::cout << "This program must take 1 argument!" << std::endl;
+		return (1);
+	}
 
-	typedef void (Harl::*f)( void );
-
+	Harl harl;
+	std::string level = av[1];
 	
-public :
-
-	void complain( std::string level );
-
-private :
-
-	f action;
-	
-	void debug( void );
-
-	void info( void );
-
-	void warning( void );
-
-	void error( void );
-
-	void unlistedLevel( void );
-
-};
-
-
-
-#endif
+	harl.complain (level);
+	return 0;
+}

@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/29 01:58:56 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/29 04:03:49 by ymafaman         ###   ########.fr       */
+/*   Created: 2024/05/29 03:03:18 by ymafaman          #+#    #+#             */
+/*   Updated: 2024/05/29 03:03:20 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef HARL_HPP
 # define HARL_HPP
@@ -18,7 +19,6 @@
 class Harl{
 
 	typedef void (Harl::*f)( void );
-
 	
 public :
 
