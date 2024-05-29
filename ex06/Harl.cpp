@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 03:03:12 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/05/29 04:28:09 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/05/29 04:32:21 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	Harl::complain( std::string level )
 	int	levelNum;
 
 	levelNum = level == "DEBUG" ? 1 : (level == "INFO" ? 2 : (level == "WARNING" ? 3 : (level == "ERROR" ? 4 : -1)));
-	
+
 	switch (levelNum)
 	{
 	case 1:
